@@ -23,9 +23,49 @@ fun main() {
 //        println(i)
 //    }
 
-    // 전달받은 배열을 반복
-    val numbers = arrayOf(1, 2, 3, 4, 5)
-    for (i in numbers) {
-        println(i)
+//    // 전달받은 배열을 반복
+//    val numbers = arrayOf(1, 2, 3, 4, 5)
+//    for (i in numbers) {
+//        println(i)
+//    }
+//
+//    // 옛날 방식
+//    val names = listOf("John", "Smith", "Alex")
+//    for (i in 0..<names.size) {
+//        val name = names[i]
+//        println("[$i] $name")
+//    }
+//
+//    for (i in names.indices) {
+//        val name = names[i]
+//        println("[$i] $name")
+//    }
+//
+//    for ((i, name) in numbers.withIndex()) {
+//        println("$i $name")
+//    }
+//
+//    names.forEachIndexed { i, name ->
+//        println("$i $name")
+//    }
+
+    val capitals = mapOf(
+        "USA" to "Washington DC",
+        "Poland" to "Warsaw",
+        "Ukraine" to "Kiev",
+    )
+
+    for (entry in capitals.entries) {
+        println(
+            "The capital of ${entry.key} is ${entry.value}"
+        )
+    }
+
+    for ((country, capital) in capitals) {
+        println("The capital of ${country} is ${capital}")
+    }
+
+    capitals.forEach { (country, capital) ->
+        println("The capital of $country is $capital")
     }
 }
